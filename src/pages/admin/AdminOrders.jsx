@@ -81,16 +81,17 @@ export default function AdminOrders() {
   const updateOrderStatus = async (orderId, newStatus) => {
     setUpdatingStatus(orderId)
 
-    await supabase.from('orders').update({ status: newStatus }).eq('id', orderId)
+    const { error } = await supabase.from('orders').update({ status: newStatus }).eq('id', orderId)
 
-    await supabase.from('order_status_history').insert({
-      order_id: orderId,
-      status: newStatus,
-    })
-
-    setOrders((prev) =>
-      prev.map((o) => (o.id === orderId ? { ...o, status: newStatus } : o))
-    )
+    if (!error) {
+      await supabase.from('order_status_history').insert({
+        order_id: orderId,
+        status: newStatus,
+      })
+      setOrders((prev) =>
+        prev.map((o) => (o.id === orderId ? { ...o, status: newStatus } : o))
+      )
+    }
 
     if (orderHistory[orderId]) {
       setOrderHistory((prev) => ({
@@ -215,7 +216,7 @@ export default function AdminOrders() {
                           {order.payment_status}
                         </span>
                       </td>
-                      <td className="px-5 py-3 text-gray-500 capitalize">{order.payment_method}</td>
+                      <td className="px-5 py-3 text-gray-500 capitalize">{order.payment_method || '—'}</td>
                     </tr>
 
                     <AnimatePresence>
@@ -259,15 +260,15 @@ export default function AdminOrders() {
                                     <div className="mt-4 space-y-1 text-sm">
                                       <div className="flex justify-between text-gray-500">
                                         <span>Subtotal</span>
-                                        <span>{formatLKR(order.subtotal)}</span>
+                                        <span>{formatLKR(order.subtotal ?? 0)}</span>
                                       </div>
                                       <div className="flex justify-between text-gray-500">
                                         <span>Shipping</span>
-                                        <span>{formatLKR(order.shipping_cost)}</span>
+                                        <span>{formatLKR(order.shipping_cost ?? 0)}</span>
                                       </div>
                                       <div className="flex justify-between font-semibold text-gray-800 pt-1 border-t border-rosegold-200">
                                         <span>Total</span>
-                                        <span>{formatLKR(order.total)}</span>
+                                        <span>{formatLKR(order.total ?? 0)}</span>
                                       </div>
                                     </div>
                                   </div>

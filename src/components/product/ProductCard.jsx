@@ -36,7 +36,7 @@ export default function ProductCard({ product }) {
   return (
     <Link
       to={`/shop/${product.slug}`}
-      className="product-card"
+      className="group product-card"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

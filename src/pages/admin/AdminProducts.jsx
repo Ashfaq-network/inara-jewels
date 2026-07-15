@@ -118,7 +118,7 @@ export default function AdminProducts() {
       name: form.name,
       slug,
       description: form.description,
-      price: parseInt(form.price, 10),
+      price: parseInt(form.price, 10) || 0,
       compare_at_price: form.compare_at_price ? parseInt(form.compare_at_price, 10) : null,
       images: imagesArray,
       colors: colorsArray,

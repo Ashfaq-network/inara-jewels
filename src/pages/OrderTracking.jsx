@@ -14,9 +14,11 @@ const statusSteps = [
 
 const statusToStep = {
   pending: 0,
-  confirmed: 1,
-  processing: 2,
+  confirmed: 0,
+  processing: 1,
+  packed: 2,
   shipped: 3,
+  out_for_delivery: 4,
   delivered: 5,
 }
 

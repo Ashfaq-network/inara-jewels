@@ -62,14 +62,14 @@ export default function AdminCustomers() {
                         <div className="w-9 h-9 rounded-full bg-rosegold-100 flex items-center justify-center text-sm font-semibold text-rosegold-600 flex-shrink-0">
                           {customer.name?.charAt(0)?.toUpperCase() || '?'}
                         </div>
-                        <span className="font-medium text-gray-700">{customer.name}</span>
+                        <span className="font-medium text-gray-700">{customer.name || 'Unknown'}</span>
                       </div>
                     </td>
                     <td className="px-5 py-3 text-gray-500">
                       <div className="flex items-center gap-1.5">
                         <Mail className="w-3.5 h-3.5 text-gray-300" />
-                        <span className="truncate max-w-[160px]" title={customer.user_id || '—'}>
-                          {customer.user_id ? customer.user_id.slice(0, 8) + '…' : '—'}
+                        <span className="truncate max-w-[160px]" title={customer.email || customer.user_id || '—'}>
+                          {customer.email || (customer.user_id ? customer.user_id.slice(0, 8) + '…' : '—')}
                         </span>
                       </div>
                     </td>

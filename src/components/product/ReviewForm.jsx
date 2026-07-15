@@ -14,7 +14,7 @@ export default function ReviewForm({ productId, onReviewSubmitted }) {
   if (!user) {
     return (
       <div className="py-6 text-center text-gray-400 bg-gray-50 rounded-xl">
-        Please <a href="/login" className="text-rosegold-500 hover:underline">login</a> to write a review.
+        Please <a href="/login" className="text-rosegold-500 hover:underline">sign in</a> to write a review.
       </div>
     )
   }

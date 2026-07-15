@@ -144,7 +144,7 @@ export default function Newsletter() {
           </AnimatePresence>
 
           {status === 'error' && errorMsg && (
-            <p className="text-red-400 text-sm mt-3">{errorMsg}</p>
+            <p className="text-red-400 text-sm mt-3 text-center max-w-lg mx-auto">{errorMsg}</p>
           )}
         </div>
       </div>

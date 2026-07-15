@@ -87,7 +87,8 @@ export default function AdminCategories() {
     e.preventDefault()
     setSaving(true)
 
-    const slug = slugify(form.name)
+    const original = editingId ? categories.find(c => c.id === editingId) : null
+    const slug = original?.slug || slugify(form.name)
     const payload = {
       name: form.name,
       slug,

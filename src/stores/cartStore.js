@@ -22,7 +22,7 @@ export const useCartStore = create(
           })
         } else {
           const newItem = {
-            id: `${product.id}-${color}-${Date.now()}`,
+            id: `${product.id}-${color}-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
             product_id: product.id,
             name: product.name,
             slug: product.slug,

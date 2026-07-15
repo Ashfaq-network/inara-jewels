@@ -14,7 +14,7 @@ export default function AdminBanners() {
   const [showDeleteModal, setShowDeleteModal] = useState(false)
   const [editingBanner, setEditingBanner] = useState(null)
   const [deletingBanner, setDeletingBanner] = useState(null)
-  const [form, setForm] = useState(emptyForm)
+  const [form, setForm] = useState({ ...emptyForm })
 
   useEffect(() => { fetchBanners() }, [])
 
@@ -25,9 +25,9 @@ export default function AdminBanners() {
     setLoading(false)
   }
 
-  function openAdd() { setEditingBanner(null); setForm(emptyForm); setShowModal(true) }
+  function openAdd() { setEditingBanner(null); setForm({ ...emptyForm }); setShowModal(true) }
   function openEdit(b) { setEditingBanner(b); setForm({ title: b.title, subtitle: b.subtitle || '', image: b.image, link: b.link || '', sort_order: b.sort_order, is_active: b.is_active }); setShowModal(true) }
-  function closeModal() { setShowModal(false); setEditingBanner(null); setForm(emptyForm) }
+  function closeModal() { setShowModal(false); setEditingBanner(null); setForm({ ...emptyForm }) }
 
   async function handleSave() {
     setSaving(true)

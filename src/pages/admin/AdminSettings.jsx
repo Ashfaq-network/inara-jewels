@@ -34,7 +34,7 @@ export default function AdminSettings() {
     if (!error && data) {
       data.forEach((row) => {
         if (row.key === 'delivery_charges') {
-          const val = row.value;
+          const val = row.value || {};
           setDelivery({
             standard: val.standard ?? '',
             express: val.express ?? '',
@@ -42,7 +42,7 @@ export default function AdminSettings() {
           });
         }
         if (row.key === 'store_info') {
-          const val = row.value;
+          const val = row.value || {};
           setStoreInfo({
             name: val.name ?? '',
             email: val.email ?? '',

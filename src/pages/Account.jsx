@@ -2,11 +2,10 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { User, Package, Heart, MapPin, LogOut, ChevronRight } from 'lucide-react'
 import { useAuthStore } from '@stores/authStore'
-import { supabase } from '@lib/supabase'
 
 export default function Account() {
   const navigate = useNavigate()
-  const { user, profile, signOut } = useAuthStore()
+  const { user, profile, signOut, updateProfile } = useAuthStore()
   const [activeTab, setActiveTab] = useState('profile')
   const [saving, setSaving] = useState(false)
   const [saveMsg, setSaveMsg] = useState(null)
@@ -35,10 +34,7 @@ export default function Account() {
     const name = form.elements.name?.value || profile?.name
     const phone = form.elements.phone?.value || profile?.phone
 
-    const { error } = await supabase
-      .from('profiles')
-      .update({ name, phone })
-      .eq('id', user.id)
+    const { error } = await updateProfile({ name, phone })
 
     if (!error) {
       setSaveMsg('Profile saved!')
