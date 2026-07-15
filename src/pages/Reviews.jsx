@@ -19,10 +19,10 @@ export default function Reviews() {
       <div className="py-16" style={{ backgroundColor: '#AA9092' }}>
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-center text-white">
-            Customer <span className="text-gradient">Reviews</span>
+            Customer <span className="text-white">Reviews</span>
           </h1>
           <div className="divider-gold mt-4" />
-          <p className="mt-6 text-gray-400 text-center max-w-2xl mx-auto">
+          <p className="mt-6 text-white/80 text-center max-w-2xl mx-auto">
             See what our customers have to say about INARA
           </p>
         </div>

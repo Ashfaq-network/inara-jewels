@@ -86,10 +86,10 @@ export default function Shop() {
       <div className="py-16" style={{ backgroundColor: '#AA9092' }}>
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-center text-white">
-            Shop <span className="text-gradient">Collection</span>
+            Shop <span className="text-white">Collection</span>
           </h1>
           <div className="divider-gold mt-4" />
-          <p className="mt-6 text-gray-400 text-center max-w-2xl mx-auto">
+          <p className="mt-6 text-white/80 text-center max-w-2xl mx-auto">
             Discover our exquisite range of premium stainless steel jewelry
           </p>
         </div>
