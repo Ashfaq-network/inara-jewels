@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
             <h2>6. Contact Us</h2>
             <p>
               If you have any questions about this Privacy Policy, please contact us at 
-              info@jewelinara.com or via WhatsApp at +94 XX XXX XXXX.
+              info@jewelinara.com or via WhatsApp at +94 77 078 6864.
             </p>
           </div>
         </div>

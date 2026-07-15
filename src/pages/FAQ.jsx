@@ -189,7 +189,7 @@ export default function FAQ() {
               Can't find what you're looking for? Our team is here to help.
             </p>
             <a
-              href="https://wa.me/94XXXXXXXXX"
+              href="https://wa.me/94770786864"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-rose inline-flex items-center gap-2"

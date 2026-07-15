@@ -12,15 +12,15 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    value: '+94 XX XXX XXXX',
-    href: 'tel:+94XXXXXXXXX',
+    value: '+94 77 078 6864',
+    href: 'tel:+94770786864',
     color: 'green',
   },
   {
     icon: MessageCircle,
     title: 'WhatsApp',
-    value: '+94 XX XXX XXXX',
-    href: 'https://wa.me/94XXXXXXXXX',
+    value: '+94 77 078 6864',
+    href: 'https://wa.me/94770786864',
     color: 'green',
   },
   {

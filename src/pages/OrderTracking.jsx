@@ -312,7 +312,7 @@ export default function OrderTracking() {
                 <div className="card-rose p-6 text-center">
                   <p className="text-gray-500 mb-4">Need help with your order?</p>
                   <a
-                    href="https://wa.me/94701234567"
+                    href="https://wa.me/94770786864"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-rose inline-flex items-center gap-2"
