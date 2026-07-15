@@ -3,6 +3,19 @@
 @import '../node_modules/tw-animate-css/dist/tw-animate.css';
 @plugin "@tailwindcss/typography";
 
+html {
+  color-scheme: light !important;
+}
+
+html, body {
+  background-color: #F6F3F2 !important;
+  color: #333 !important;
+}
+
+* {
+  color-scheme: light !important;
+}
+
 @theme inline {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
