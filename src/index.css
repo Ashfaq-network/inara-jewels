@@ -3,30 +3,22 @@
 @import '../node_modules/tw-animate-css/dist/tw-animate.css';
 @plugin "@tailwindcss/typography";
 
-@custom-variant dark (&);
+@variant dark { }
 
-html {
+html, body, #root {
   color-scheme: light !important;
+  background-color: #F6F3F2 !important;
+}
+
+body {
+  -webkit-background-color: #F6F3F2 !important;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  html, body, #root {
     color-scheme: light !important;
-    --background: 30 40% 97% !important;
-    --foreground: 10 15% 18% !important;
-    --card: 0 0% 100% !important;
-    --card-foreground: 10 15% 18% !important;
-    --primary: 340 28% 42% !important;
-    --primary-foreground: 0 0% 100% !important;
-    --secondary: 15 35% 88% !important;
-    --secondary-foreground: 10 15% 18% !important;
-    --muted: 20 25% 93% !important;
-    --muted-foreground: 10 12% 50% !important;
-    --accent: 15 35% 88% !important;
-    --accent-foreground: 10 15% 18% !important;
-    --border: 20 20% 88% !important;
-    --input: 20 20% 88% !important;
-    --ring: 340 25% 55% !important;
+    background-color: #F6F3F2 !important;
+    -webkit-background-color: #F6F3F2 !important;
   }
 }
 
