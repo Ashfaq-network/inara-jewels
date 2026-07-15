@@ -80,17 +80,30 @@ export default function Shop() {
 
   const hasActiveFilters = currentCategory !== 'all' || currentPriceRange !== 'all'
 
+  const headerContent = {
+    all: { title: 'Shop', subtitle: 'All', desc: 'Discover our exquisite range of premium stainless steel jewelry' },
+    rings: { title: 'Rings', subtitle: 'Collection', desc: 'Elegant bands crafted to adorn your every gesture' },
+    necklaces: { title: 'Necklaces', subtitle: 'Collection', desc: 'Graceful chains and pendants to elevate your neckline' },
+    bracelets: { title: 'Bracelets', subtitle: 'Collection', desc: 'Delicate wristwear for an opulent everyday touch' },
+    earrings: { title: 'Earrings', subtitle: 'Collection', desc: 'Timeless studs and drops that frame your beauty' },
+    anklets: { title: 'Anklets', subtitle: 'Collection', desc: 'Subtle elegance for your every step' },
+    couple: { title: 'Made for Two', subtitle: '', desc: 'Matching pieces that celebrate your bond' },
+    gifts: { title: 'Gift', subtitle: 'Collection', desc: 'Perfect presents for the ones you love' },
+  }
+  const header = headerContent[currentCategory] || headerContent.all
+
   return (
     <div className="min-h-screen bg-white">
       {/* Page Header */}
       <div className="py-16" style={{ backgroundColor: '#AA9092' }}>
-        <div className="container-custom">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-center text-white">
-            Shop <span className="text-white">Collection</span>
+        <div className="container-custom text-center">
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-white">
+            {header.title}{' '}
+            <span className="font-script text-5xl md:text-6xl font-normal">{header.subtitle}</span>
           </h1>
           <div className="divider-gold mt-4" />
-          <p className="mt-6 text-white/80 text-center max-w-2xl mx-auto">
-            Discover our exquisite range of premium stainless steel jewelry
+          <p className="mt-6 text-white/80 max-w-2xl mx-auto">
+            {header.desc}
           </p>
         </div>
       </div>
