@@ -117,15 +117,16 @@ body {
 }
 
 /* ===== BACKGROUND COLORS ===== */
-.bg-softwhite { background-color: var(--softwhite); }
-.bg-brand-black { background-color: var(--brand-black); }
-.bg-cream-50 { background-color: var(--cream-50); }
-.bg-rosegold-50 { background-color: var(--rosegold-50); }
-.bg-rosegold-100 { background-color: var(--rosegold-100); }
-.bg-rosegold-200 { background-color: var(--rosegold-200); }
-.bg-rosegold-500 { background-color: var(--rosegold-500); }
-.bg-gold-50 { background-color: var(--gold-50); }
-.bg-gold-200 { background-color: var(--gold-200); }
+.bg-white { background-color: white !important; }
+.bg-softwhite { background-color: var(--softwhite) !important; }
+.bg-brand-black { background-color: var(--brand-black) !important; }
+.bg-cream-50 { background-color: var(--cream-50) !important; }
+.bg-rosegold-50 { background-color: var(--rosegold-50) !important; }
+.bg-rosegold-100 { background-color: var(--rosegold-100) !important; }
+.bg-rosegold-200 { background-color: var(--rosegold-200) !important; }
+.bg-rosegold-500 { background-color: var(--rosegold-500) !important; }
+.bg-gold-50 { background-color: var(--gold-50) !important; }
+.bg-gold-200 { background-color: var(--gold-200) !important; }
 
 /* ===== TEXT COLORS ===== */
 .text-rosegold-200 { color: var(--rosegold-200); }
