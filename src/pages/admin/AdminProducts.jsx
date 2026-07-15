@@ -14,6 +14,7 @@ import {
   Edit,
   Search,
 } from 'lucide-react'
+import ImageUpload from '@components/admin/ImageUpload'
 
 const formatLKR = (amount) =>
   new Intl.NumberFormat('en-LK', {
@@ -391,13 +392,12 @@ export default function AdminProducts() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-600 mb-1.5">Image URLs (comma-separated)</label>
-                  <input
-                    type="text"
-                    value={form.images}
-                    onChange={(e) => setForm({ ...form, images: e.target.value })}
-                    className="input-rose"
-                    placeholder="/images/products/img1.jpg, /images/products/img2.jpg"
+                  <label className="block text-sm font-medium text-gray-600 mb-1.5">Product Images</label>
+                  <ImageUpload
+                    bucket="products"
+                    multiple={true}
+                    existingImages={editingProduct?.images || []}
+                    onUpload={(imgs) => setForm({ ...form, images: imgs.join(', ') })}
                   />
                 </div>
 

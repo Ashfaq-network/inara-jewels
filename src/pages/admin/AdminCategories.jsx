@@ -11,6 +11,7 @@ import {
   Save,
   FolderOpen,
 } from 'lucide-react'
+import ImageUpload from '@components/admin/ImageUpload'
 
 function slugify(text) {
   return text
@@ -266,13 +267,11 @@ export default function AdminCategories() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-600 mb-1.5">Image URL</label>
-                  <input
-                    type="text"
-                    value={form.image}
-                    onChange={(e) => setForm({ ...form, image: e.target.value })}
-                    className="input-rose"
-                    placeholder="https://example.com/category.jpg"
+                  <label className="block text-sm font-medium text-gray-600 mb-1.5">Category Image</label>
+                  <ImageUpload
+                    bucket="categories"
+                    existingImages={form.image ? [form.image] : []}
+                    onUpload={(imgs) => setForm({ ...form, image: imgs[0] || '' })}
                   />
                 </div>
 

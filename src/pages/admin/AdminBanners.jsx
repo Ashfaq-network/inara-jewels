@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { supabase } from '@lib/supabase'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Plus, Trash2, X, Loader2, Edit, ImageIcon, Save, Eye, EyeOff } from 'lucide-react'
+import ImageUpload from '@components/admin/ImageUpload'
 
 const emptyForm = { title: '', subtitle: '', image: '', link: '', sort_order: 0, is_active: true }
 
@@ -146,8 +147,12 @@ export default function AdminBanners() {
                   <input type="text" value={form.subtitle} onChange={(e) => setForm({ ...form, subtitle: e.target.value })} className="input-rose" placeholder="Subtitle" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-600 mb-1.5">Image URL *</label>
-                  <input type="text" value={form.image} onChange={(e) => setForm({ ...form, image: e.target.value })} className="input-rose" placeholder="/images/banners/..." />
+                  <label className="block text-sm font-medium text-gray-600 mb-1.5">Banner Image *</label>
+                  <ImageUpload
+                    bucket="banners"
+                    existingImages={editingBanner?.image ? [editingBanner.image] : []}
+                    onUpload={(imgs) => setForm({ ...form, image: imgs[0] || '' })}
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-600 mb-1.5">Link (optional)</label>
