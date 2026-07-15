@@ -36,12 +36,13 @@ export default function InaraHome() {
       {/* Hero Section */}
       <section
         className="relative w-full overflow-hidden"
-        style={{ height: 'clamp(400px, 60vw, 650px)' }}
+        style={{ height: 'clamp(300px, 50vw, 650px)' }}
       >
         <img
           src="/hero.jpeg"
           alt="INARA – An opulent touch everyday"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover md:object-center object-left"
+          style={{ objectPosition: 'left center' }}
         />
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 md:bottom-12 md:left-[28%] z-10">
           <Link
