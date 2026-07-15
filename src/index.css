@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@400;600&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+@import '../node_modules/tw-animate-css/dist/tw-animate.css';
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  --background: 30 40% 97%;
+  --foreground: 10 15% 18%;
+  --border: 20 20% 88%;
+  --input: 20 20% 88%;
+  --ring: 340 25% 55%;
+  --card: 0 0% 100%;
+  --card-foreground: 10 15% 18%;
+  --primary: 340 28% 42%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 15 35% 88%;
+  --secondary-foreground: 10 15% 18%;
+  --muted: 20 25% 93%;
+  --muted-foreground: 10 12% 50%;
+  --accent: 15 35% 88%;
+  --accent-foreground: 10 15% 18%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --app-font-sans: 'Lato', sans-serif;
+  --app-font-serif: 'Cormorant Garamond', serif;
+  --radius: 0.5rem;
+
+  /* INARA Brand Colors */
+  --rosegold-50: #f8f0f0;
+  --rosegold-100: #f0dede;
+  --rosegold-200: #EADFDB;
+  --rosegold-300: #D8C5C4;
+  --rosegold-400: #B79FA0;
+  --rosegold-500: #AA9092;
+  --rosegold-600: #8F7477;
+  --rosegold-700: #6B5557;
+  --cream-50: #FDF9F7;
+  --gold-50: #FDF8F0;
+  --gold-200: #E8D5B0;
+  --gold-400: #C89A5B;
+  --gold-500: #B8894A;
+  --gold-600: #A07840;
+  --gold-700: #8A6535;
+  --brand-black: #2A1F1F;
+  --softwhite: #FAF8F7;
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply font-sans antialiased bg-background text-foreground; }
+}
+
+/* ===== FONT UTILITIES ===== */
+.font-heading { font-family: 'Cormorant Garamond', serif; }
+.font-script  { font-family: 'Dancing Script', cursive; }
+.font-arabic  { font-family: 'Noto Naskh Arabic', serif; }
+.font-body    { font-family: 'Lato', sans-serif; }
+.font-display { font-family: 'Cormorant Garamond', serif; }
+
+/* ===== LAYOUT UTILITIES ===== */
+.container-custom {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* ===== BACKGROUND COLORS ===== */
+.bg-softwhite { background-color: var(--softwhite); }
+.bg-brand-black { background-color: var(--brand-black); }
+.bg-cream-50 { background-color: var(--cream-50); }
+.bg-rosegold-50 { background-color: var(--rosegold-50); }
+.bg-rosegold-100 { background-color: var(--rosegold-100); }
+.bg-rosegold-200 { background-color: var(--rosegold-200); }
+.bg-rosegold-500 { background-color: var(--rosegold-500); }
+.bg-gold-50 { background-color: var(--gold-50); }
+.bg-gold-200 { background-color: var(--gold-200); }
+
+/* ===== TEXT COLORS ===== */
+.text-rosegold-200 { color: var(--rosegold-200); }
+.text-rosegold-300 { color: var(--rosegold-300); }
+.text-rosegold-400 { color: var(--rosegold-400); }
+.text-rosegold-500 { color: var(--rosegold-500); }
+.text-rosegold-600 { color: var(--rosegold-600); }
+.fill-rosegold-400 { fill: var(--rosegold-400); }
+.fill-rosegold-500 { fill: var(--rosegold-500); }
+.text-gold-600 { color: var(--gold-600); }
+.text-gold-700 { color: var(--gold-700); }
+
+/* ===== RING COLORS ===== */
+.ring-rosegold-200 { --tw-ring-color: var(--rosegold-200); }
+.ring-rosegold-500 { --tw-ring-color: var(--rosegold-500); }
+
+/* ===== BORDER COLORS ===== */
+.border-rosegold-100 { border-color: var(--rosegold-100); }
+.border-rosegold-200 { border-color: var(--rosegold-200); }
+.border-rosegold-400 { border-color: var(--rosegold-400); }
+.border-rosegold-500 { border-color: var(--rosegold-500); }
+.border-gold-200 { border-color: var(--gold-200); }
+
+/* ===== HOVER VARIANTS FOR CUSTOM COLORS ===== */
+.hover\:text-rosegold-500:hover { color: var(--rosegold-500); }
+.hover\:text-rosegold-600:hover { color: var(--rosegold-600); }
+.hover\:bg-rosegold-50:hover { background-color: var(--rosegold-50); }
+.hover\:bg-rosegold-100:hover { background-color: var(--rosegold-100); }
+.hover\:bg-rosegold-200:hover { background-color: var(--rosegold-200); }
+.hover\:border-rosegold-400:hover { border-color: var(--rosegold-400); }
+.hover\:border-rosegold-500:hover { border-color: var(--rosegold-500); }
+.hover\:border-rosegold-200:hover { border-color: var(--rosegold-200); }
+
+/* ===== BUTTONS ===== */
+.btn-rose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  background-color: var(--rosegold-500);
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.btn-rose:hover {
+  background-color: var(--rosegold-600);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(170, 144, 146, 0.3);
+}
+.btn-rose:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: var(--rosegold-500);
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.btn-ghost:hover {
+  background-color: var(--rosegold-50);
+}
+
+.btn-outline-rose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: var(--rosegold-500);
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-radius: 9999px;
+  border: 1px solid var(--rosegold-300);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn-outline-rose:hover {
+  background-color: var(--rosegold-50);
+  border-color: var(--rosegold-500);
+}
+
+/* ===== CARDS ===== */
+.card-rose {
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid var(--rosegold-100);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: box-shadow 0.3s ease;
+}
+.card-rose:hover {
+  box-shadow: 0 4px 16px rgba(170, 144, 146, 0.1);
+}
+
+.product-card {
+  display: block;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--rosegold-100);
+  transition: all 0.3s ease;
+}
+.product-card:hover {
+  box-shadow: 0 8px 24px rgba(170, 144, 146, 0.15);
+  transform: translateY(-2px);
+}
+.product-image {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background-color: var(--cream-50);
+}
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.card-luxury {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--rosegold-100);
+}
+
+/* ===== INPUTS ===== */
+.input-rose {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 1px solid var(--rosegold-200);
+  border-radius: 0.75rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875rem;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+.input-rose:focus {
+  border-color: var(--rosegold-400);
+  box-shadow: 0 0 0 3px rgba(170, 144, 146, 0.1);
+}
+.input-rose::placeholder {
+  color: #aaa;
+}
+
+/* ===== BADGES ===== */
+.badge-rose {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--rosegold-50);
+  color: var(--rosegold-600);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: 1px solid var(--rosegold-200);
+}
+
+.badge-new {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  background-color: #ECFDF5;
+  color: #059669;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: 1px solid #A7F3D0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+}
+
+/* ===== GRADIENT TEXT ===== */
+.text-gradient {
+  background: linear-gradient(135deg, var(--rosegold-400), var(--rosegold-600));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== DIVIDERS ===== */
+.divider-gold {
+  width: 4rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-400), var(--gold-200));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--softwhite); }
+::-webkit-scrollbar-thumb { background: var(--rosegold-300); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--rosegold-400); }
+
+/* ===== SELECTION ===== */
+::selection {
+  background-color: var(--rosegold-200);
+  color: var(--brand-black);
+}
