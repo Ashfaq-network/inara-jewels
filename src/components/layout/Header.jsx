@@ -60,7 +60,7 @@ export default function Header() {
             Free Delivery Across Islandwide
           </span>
           <span className="text-[10px] uppercase tracking-[0.25em] opacity-90">
-            Waterproof &nbsp;&bull;&nbsp; Anti-Tarnish &nbsp;&bull;&nbsp; 18K Gold Plated
+            Free Delivery Over Rs. 5,000 &nbsp;&bull;&nbsp; Easy 7-Day Returns &nbsp;&bull;&nbsp; Premium Quality
           </span>
           <div className="flex items-center gap-3">
             <a
