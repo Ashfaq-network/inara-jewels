@@ -60,7 +60,7 @@ export default function Header() {
             Free Delivery Across Islandwide
           </span>
           <span className="text-[10px] uppercase tracking-[0.25em] opacity-90">
-            Waterproof &nbsp;&bull;&nbsp; Hypoallergenic &nbsp;&bull;&nbsp; 18K Gold Plated
+            Waterproof &nbsp;&bull;&nbsp; Anti-Tarnish &nbsp;&bull;&nbsp; 18K Gold Plated
           </span>
           <div className="flex items-center gap-3">
             <a

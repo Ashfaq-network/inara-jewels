@@ -61,7 +61,7 @@ export default function InaraHome() {
             {[
               { icon: <Truck size={32} className="text-primary mb-4 stroke-[1.5]" />,       label: 'ISLANDWIDE DELIVERY', sub: 'Fast & reliable delivery'  },
               { icon: <Droplet size={32} className="text-primary mb-4 stroke-[1.5]" />,     label: 'WATERPROOF',          sub: 'Made for everyday wear'   },
-              { icon: <ShieldCheck size={32} className="text-primary mb-4 stroke-[1.5]" />, label: 'ANTI-TARNISH',        sub: 'Long lasting shine'        },
+              { icon: <ShieldCheck size={32} className="text-primary mb-4 stroke-[1.5]" />, label: 'HYPOALLERGENIC',       sub: 'Safe for sensitive skin'  },
               { icon: <Star size={32} className="text-primary mb-4 stroke-[1.5]" />,        label: '18K GOLD PLATED',     sub: 'Premium quality'           },
             ].map(({ icon, label, sub }) => (
               <div key={label} className="flex flex-col items-center text-center">
