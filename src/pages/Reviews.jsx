@@ -16,7 +16,7 @@ const fadeInUp = {
 export default function Reviews() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="bg-brand-black py-16">
+      <div className="py-16" style={{ backgroundColor: '#AA9092' }}>
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-center text-white">
             Customer <span className="text-gradient">Reviews</span>

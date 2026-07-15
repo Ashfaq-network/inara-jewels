@@ -83,7 +83,7 @@ export default function Shop() {
   return (
     <div className="min-h-screen bg-white">
       {/* Page Header */}
-      <div className="bg-brand-black py-16">
+      <div className="py-16" style={{ backgroundColor: '#AA9092' }}>
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-center text-white">
             Shop <span className="text-gradient">Collection</span>
