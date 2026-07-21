@@ -42,7 +42,7 @@ export default function InaraHome() {
           src="/hero.jpeg"
           alt="INARA – An opulent touch everyday"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ objectPosition: '38% center' }}
+          style={{ objectPosition: '20% center' }}
           style={{ objectPosition: '20% center' }}
         />
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 md:bottom-12 md:left-[28%] z-10">
