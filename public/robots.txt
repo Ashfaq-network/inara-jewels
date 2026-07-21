@@ -7,4 +7,4 @@ Disallow: /cart
 Disallow: /login
 Disallow: /register
 
-Sitemap: https://inarajewels.lk/sitemap.xml
+Sitemap: https://jewelinara.com/sitemap.xml
