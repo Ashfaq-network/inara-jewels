@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /checkout
+Disallow: /account
+Disallow: /cart
+Disallow: /login
+Disallow: /register
+
+Sitemap: https://inarajewels.lk/sitemap.xml
