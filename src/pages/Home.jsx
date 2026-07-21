@@ -35,8 +35,8 @@ export default function InaraHome() {
 
       {/* Hero Section */}
       <section
-        className="relative w-full overflow-hidden"
-        style={{ height: 'clamp(300px, 50vw, 650px)' }}
+        className="relative w-full overflow-hidden bg-[#f5ebe6]"
+        style={{ height: 'clamp(420px, 70vw, 650px)' }}
       >
         <img
           src="/hero.jpeg"
