@@ -7,6 +7,7 @@ import { useCartStore } from '@stores/cartStore'
 export default function ProductCard({ product }) {
   const [isHovered, setIsHovered] = useState(false)
   const [isWishlisted, setIsWishlisted] = useState(false)
+  const [imgLoaded, setImgLoaded] = useState(false)
   const addItem = useCartStore((state) => state.addItem)
 
   const formatPrice = (price) => {
@@ -44,8 +45,9 @@ export default function ProductCard({ product }) {
         <img
           src={product.images?.[0]}
           alt={product.name}
-          className="w-full h-full object-cover"
+          className={`w-full h-full object-cover transition-opacity duration-500 ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
           loading="lazy"
+          onLoad={() => setImgLoaded(true)}
         />
 
         <div className="absolute top-3 left-3 flex flex-col gap-2">
